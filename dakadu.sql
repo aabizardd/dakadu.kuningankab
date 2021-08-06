@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2021 at 06:18 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Aug 06, 2021 at 08:42 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -30,14 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `dokpajak_pajakdaerah` (
   `id_dokpajak_pajakdaerah` bigint(20) UNSIGNED NOT NULL,
-  `foto1` text DEFAULT NULL,
-  `foto2` text DEFAULT NULL,
-  `foto3` text DEFAULT NULL,
-  `foto4` text DEFAULT NULL,
-  `foto5` text DEFAULT NULL,
+  `foto1` text DEFAULT 'default.png',
+  `foto2` text DEFAULT 'default.png',
+  `foto3` text DEFAULT 'default.png',
+  `foto4` text DEFAULT 'default.png',
+  `foto5` text DEFAULT 'default.png',
   `tanggal_input` date NOT NULL,
   `keterangan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `dokpajak_pajakdaerah`
+--
+
+INSERT INTO `dokpajak_pajakdaerah` (`id_dokpajak_pajakdaerah`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tanggal_input`, `keterangan`) VALUES
+(2, '1628275346_3447d8d5eac0eed896dd.png', 'default.png', 'default.png', 'default.png', 'default.png', '2021-08-07', 'test');
 
 -- --------------------------------------------------------
 
@@ -47,11 +53,11 @@ CREATE TABLE `dokpajak_pajakdaerah` (
 
 CREATE TABLE `dokpajak_pph` (
   `id_dokpajak_pph` bigint(20) UNSIGNED NOT NULL,
-  `foto1` text DEFAULT NULL,
-  `foto2` text DEFAULT NULL,
-  `foto3` text DEFAULT NULL,
-  `foto4` text DEFAULT NULL,
-  `foto5` text DEFAULT NULL,
+  `foto1` text DEFAULT 'default.png',
+  `foto2` text DEFAULT 'default.png',
+  `foto3` text DEFAULT 'default.png',
+  `foto4` text DEFAULT 'default.png',
+  `foto5` text DEFAULT 'default.png',
   `tanggal_input` date NOT NULL,
   `keterangan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -61,8 +67,7 @@ CREATE TABLE `dokpajak_pph` (
 --
 
 INSERT INTO `dokpajak_pph` (`id_dokpajak_pph`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tanggal_input`, `keterangan`) VALUES
-(5, 'Untitled.pdf', 'background.jpg', 'Untitled.pdf', '', '', '2021-08-04', 'sdfghjk'),
-(6, 'background.jpg', 'background.jpg', 'q.jpg', '', '', '2021-08-04', 'adsad frevisi');
+(7, '1628275019_22c7fd67bd51228ac91a.png', '1628275019_4cbfc3dc3df51d9a0cf9.png', 'default.png', 'default.png', 'default.png', '2021-08-07', 'test data');
 
 -- --------------------------------------------------------
 
@@ -72,11 +77,11 @@ INSERT INTO `dokpajak_pph` (`id_dokpajak_pph`, `foto1`, `foto2`, `foto3`, `foto4
 
 CREATE TABLE `dokpajak_ppndn` (
   `id_dokpajak_ppndn` bigint(20) UNSIGNED NOT NULL,
-  `foto1` text DEFAULT NULL,
-  `foto2` text DEFAULT NULL,
-  `foto3` text DEFAULT NULL,
-  `foto4` text DEFAULT NULL,
-  `foto5` text DEFAULT NULL,
+  `foto1` text DEFAULT 'default.png',
+  `foto2` text DEFAULT 'default.png',
+  `foto3` text DEFAULT 'default.png',
+  `foto4` text DEFAULT 'default.png',
+  `foto5` text DEFAULT 'default.png',
   `tanggal_input` date NOT NULL,
   `keterangan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -86,7 +91,7 @@ CREATE TABLE `dokpajak_ppndn` (
 --
 
 INSERT INTO `dokpajak_ppndn` (`id_dokpajak_ppndn`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tanggal_input`, `keterangan`) VALUES
-(4, '', '', 'Untitled.fig', '', '', '2021-08-04', 'ertyuio');
+(5, '1628274694_f087855ef1965d927967.png', '1628274694_f5799f6f798a55950701.png', '1628274694_1e9a2650090cdc20a540.png', 'default.png', 'default.png', '2021-08-07', 'test');
 
 -- --------------------------------------------------------
 
@@ -97,11 +102,11 @@ INSERT INTO `dokpajak_ppndn` (`id_dokpajak_ppndn`, `foto1`, `foto2`, `foto3`, `f
 CREATE TABLE `dokspj` (
   `id_dokspj` bigint(20) UNSIGNED NOT NULL,
   `kode_arsip` varchar(100) NOT NULL,
-  `foto1` text DEFAULT NULL,
-  `foto2` text DEFAULT NULL,
-  `foto3` text DEFAULT NULL,
-  `foto4` text DEFAULT NULL,
-  `foto5` text DEFAULT NULL,
+  `foto1` text DEFAULT 'default.png',
+  `foto2` text DEFAULT 'default.png',
+  `foto3` text DEFAULT 'default.png',
+  `foto4` text DEFAULT 'default.png',
+  `foto5` text DEFAULT 'default.png',
   `tanggal_input` date NOT NULL,
   `keterangan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -111,8 +116,7 @@ CREATE TABLE `dokspj` (
 --
 
 INSERT INTO `dokspj` (`id_dokspj`, `kode_arsip`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tanggal_input`, `keterangan`) VALUES
-(2, 'Option 3', 'Untitled.pdf', 'q.jpg', 'background.jpg', 'Untitled.fig', 'Untitled.pdf', '2021-08-05', 'cek inputan 1'),
-(3, 'Belanja Insentif bagi ASN (5.02.5.02.0.001.2.02.01.5.1.01.03.01.0006.)', '', '', '', '', '', '2021-08-05', 'cek 2');
+(5, 'Belanja Alat/Bahan untuk Kegiatan Kantor-Alat/Bahan untuk Kegiatan Kantor Lainnya (5.02.5.02.0.001.2', '1628274323_1a7502141970010e5dbe.jpg', 'default.png', '1628274323_c5294c7c18bcbb832285.png', 'default.png', 'default.png', '2021-08-07', 'asd');
 
 -- --------------------------------------------------------
 
@@ -122,11 +126,11 @@ INSERT INTO `dokspj` (`id_dokspj`, `kode_arsip`, `foto1`, `foto2`, `foto3`, `fot
 
 CREATE TABLE `lk` (
   `id_lk` bigint(20) UNSIGNED NOT NULL,
-  `foto1` text DEFAULT NULL,
-  `foto2` text DEFAULT NULL,
-  `foto3` text DEFAULT NULL,
-  `foto4` text DEFAULT NULL,
-  `foto5` text DEFAULT NULL,
+  `foto1` text DEFAULT 'default.png',
+  `foto2` text DEFAULT 'default.png',
+  `foto3` text DEFAULT 'default.png',
+  `foto4` text DEFAULT 'default.png',
+  `foto5` text DEFAULT 'default.png',
   `tanggal_input` date NOT NULL,
   `keterangan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -136,8 +140,7 @@ CREATE TABLE `lk` (
 --
 
 INSERT INTO `lk` (`id_lk`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tanggal_input`, `keterangan`) VALUES
-(5, 'Untitled.pdf', 'background.jpg', 'q.jpg', 'Untitled.pdf', 'background.jpg', '2021-08-04', 'cek cek lk inputan'),
-(6, 'Untitled.pdf', 'background.jpg', '', '', '', '2021-08-04', 'kkk');
+(7, '1628273843_2804fe12f3a767000bcb.png', '1628273843_61f7f3494f4f3295f10f.png', 'default.png', 'default.png', 'default.png', '2021-08-06', 'aa');
 
 -- --------------------------------------------------------
 
@@ -181,11 +184,11 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 
 CREATE TABLE `rkadpa` (
   `id_rkadpa` bigint(20) UNSIGNED NOT NULL,
-  `foto1` text DEFAULT NULL,
-  `foto2` text DEFAULT NULL,
-  `foto3` text DEFAULT NULL,
-  `foto4` text DEFAULT NULL,
-  `foto5` text DEFAULT NULL,
+  `foto1` text DEFAULT 'default.png',
+  `foto2` text DEFAULT 'default.png',
+  `foto3` text DEFAULT 'default.png',
+  `foto4` text DEFAULT 'default.png',
+  `foto5` text DEFAULT 'default.png',
   `tanggal_input` date NOT NULL,
   `keterangan` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -195,11 +198,7 @@ CREATE TABLE `rkadpa` (
 --
 
 INSERT INTO `rkadpa` (`id_rkadpa`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tanggal_input`, `keterangan`) VALUES
-(1, 'cek1.jpg', 'cek2.jpg', 'cek3.jpg', NULL, NULL, '2021-07-31', 'test program'),
-(3, 'Untitled.pdf', 'Untitled.pdf', '', '', '', '2021-07-10', 'cek 3'),
-(4, 'Untitled.pdf', 'background.jpg', '', '', '', '2021-07-31', 'ccek 3'),
-(14, 'Untitled.pdf', 'background.jpg', '', '', '', '2021-08-04', 'asddasdaddd'),
-(15, 'Untitled.pdf', 'q.jpg', '', '', '', '2021-08-04', 'dasdddddddddd');
+(20, '1628272703_cc8319c3e7de3c69ec10.png', 'default.png', '1628272703_b14f9a480c02023752bd.png', 'default.png', 'default.png', '2021-08-07', 'asd');
 
 -- --------------------------------------------------------
 
@@ -220,10 +219,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama_user`, `username_user`, `password_user`, `info_user`) VALUES
-(1, 'Pegawai', 'kipecek', '$2y$10$9/0xd7tyap2DwCwLQSdx3.XGb0XOxIX6YKoZtMW.bGxmFdOBTvQae', NULL),
-(2, 'Administrator', 'admin', '$2y$10$LpZBt9TmindItBvpa/XEgeXEtIiSlay8qkzW96DMeRVHHQvNLH9B.', NULL),
-(8, 'cek', 'cekcek', '123', 'Pegawai'),
-(9, 'cek', 'cek', 'cek', 'Admin');
+(1, 'Pegawai', 'kipecek', '$2y$10$92vF/n718g0KT1NVfAJs.OoSIlgWnnEF1mmC2uiFI6ZVGDSCX6atG', 'Pegawai'),
+(2, 'Administrator', 'admin', '$2y$10$92vF/n718g0KT1NVfAJs.OoSIlgWnnEF1mmC2uiFI6ZVGDSCX6atG', 'Admin'),
+(8, 'cek', 'cekcek', '$2y$10$92vF/n718g0KT1NVfAJs.OoSIlgWnnEF1mmC2uiFI6ZVGDSCX6atG', 'Pegawai'),
+(9, 'cek', 'cek', '$2y$10$92vF/n718g0KT1NVfAJs.OoSIlgWnnEF1mmC2uiFI6ZVGDSCX6atG', 'Admin'),
+(14, 'alwan', 'alwan', '$2y$10$BdDXgHpjJAmIGKxdY5CNVuwuihkIXFr5nWAY0w2LGBS.2BGHXgJ0a', 'Pegawai');
 
 --
 -- Indexes for dumped tables
@@ -285,31 +285,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `dokpajak_pajakdaerah`
 --
 ALTER TABLE `dokpajak_pajakdaerah`
-  MODIFY `id_dokpajak_pajakdaerah` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_dokpajak_pajakdaerah` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `dokpajak_pph`
 --
 ALTER TABLE `dokpajak_pph`
-  MODIFY `id_dokpajak_pph` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_dokpajak_pph` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `dokpajak_ppndn`
 --
 ALTER TABLE `dokpajak_ppndn`
-  MODIFY `id_dokpajak_ppndn` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_dokpajak_ppndn` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `dokspj`
 --
 ALTER TABLE `dokspj`
-  MODIFY `id_dokspj` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_dokspj` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `lk`
 --
 ALTER TABLE `lk`
-  MODIFY `id_lk` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_lk` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -321,13 +321,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `rkadpa`
 --
 ALTER TABLE `rkadpa`
-  MODIFY `id_rkadpa` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_rkadpa` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
