@@ -34,28 +34,53 @@ use App\Controllers\Input_rkadpa;
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Dokumentasi 1</label>
-                            <input type="file" class="form-control-file" id="foto1" name="foto1">
+                            <input type="file"
+                                class="form-control-file <?=($validation->hasError('foto1')) ? "is-invalid" : ""?>"
+                                id="foto1" name="foto1">
                             <label for="foto1">Maksimal file 500kb</label>
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?=$validation->getError('foto1')?>
+                            </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Dokumentasi 2</label>
-                            <input type="file" class="form-control-file" id="foto2" name="foto2">
+                            <input type="file"
+                                class="form-control-file <?=($validation->hasError('foto2')) ? "is-invalid" : ""?>"
+                                id="foto2" name="foto2">
                             <label for="foto2">Maksimal file 500kb</label>
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?=$validation->getError('foto2')?>
+                            </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Dokumentasi 3</label>
-                            <input type="file" class="form-control-file" id="foto3" name="foto3">
+                            <input type="file"
+                                class="form-control-file <?=($validation->hasError('foto3')) ? "is-invalid" : ""?>"
+                                id="foto3" name="foto3">
                             <label for="foto3">Maksimal file 500kb</label>
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?=$validation->getError('foto3')?>
+                            </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Dokumentasi 4</label>
-                            <input type="file" class="form-control-file" id="foto4" name="foto4">
+                            <input type="file"
+                                class="form-control-file <?=($validation->hasError('foto4')) ? "is-invalid" : ""?>"
+                                id="foto4" name="foto4">
                             <label for="foto4">Maksimal file 500kb</label>
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?=$validation->getError('foto4')?>
+                            </div>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Dokumentasi 5</label>
-                            <input type="file" class="form-control-file" id="foto5" name="foto5">
+                            <input type="file"
+                                class="form-control-file <?=($validation->hasError('foto5')) ? "is-invalid" : ""?>"
+                                id="foto5" name="foto5">
                             <label for="foto5">Maksimal file 500kb</label>
+                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                <?=$validation->getError('foto5')?>
+                            </div>
                         </div>
                     </div>
 

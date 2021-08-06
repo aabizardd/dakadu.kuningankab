@@ -53,6 +53,7 @@ $routes->post('input_rkadpa', 'Input_rkadpa::store');
 $routes->get('input_rkadpa/edit/(:num)', 'Input_rkadpa::edit/$1');
 $routes->put('input_rkadpa/(:any)', 'Input_rkadpa::update/$1');
 $routes->delete('input_rkadpa/(:segment)', 'Input_rkadpa::destroy/$1');
+// $routes->post('input_rkadpa/index', 'Input_rkadpa::index');
 
 $routes->get('input_lk', 'Input_lk::index');
 $routes->get('input_lk/add', 'Input_lk::create');
